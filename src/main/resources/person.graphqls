@@ -2,6 +2,9 @@ type Person {
     id: Int!
     firstName: String!
     lastName: String!
+    dateOfBirth: Date
 
     fullName: String!
 }
+
+scalar Date

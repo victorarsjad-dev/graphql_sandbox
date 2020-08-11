@@ -5,6 +5,7 @@ import com.sandbox.graphqldemo.models.Person;
 import com.sandbox.graphqldemo.service.PersonService;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.Collection;
 
 @Service
@@ -16,7 +17,7 @@ public class CreatePersonMutationResolver implements GraphQLMutationResolver {
         this.personService = personService;
     }
 
-    public Person createPerson(final String firstName, final String lastName) {
-        return personService.createPerson(firstName, lastName);
+    public Person createPerson(final String firstName, final String lastName, final LocalDate dateOfBirth) {
+        return personService.createPerson(firstName, lastName, dateOfBirth);
     }
 }
